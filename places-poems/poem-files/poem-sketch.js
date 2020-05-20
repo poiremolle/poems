@@ -10,6 +10,7 @@ var yearWordsNoun = ["a thunderous desire", "a drop of water falling from a bran
 
 var dayPhrases = ["how can time be so liquid?", "it passed like a train going on to other places", "count to ten if you're feeling lonely", "I read the same book twice", "we saw movies, we ate breakfast", "i truly believe it is sufficient", "who's to say that we are not in love", "your skin is soft and it holds no temples", "there was no way we'd make it, i walked you home", "it was ok in the end", "where have all the fire escapes been moved to?", "i didn't know about the trends", "your arm across my waist, a frame in my mind", "you respected me", "however you felt back then, however you feel now", "not long enough for it to break me", "on every road side, a lonely song", "somewhere for belonging", "i wish i knew", "reading books at ungodly hours", "lemon tea and cute porcelain", "nothing to write home about", "but it was enough", "i move along with the crowd", "but sometimes i look back and I see you, staring at the sun", "it was all over the newspapers", "it's sad but it also makes sense", "somehow there was a plan, i saw it on the map", "mischief and a jars of butter biscuits", "how many ways can a leaf fall to the ground", "behind the television set, obviously"];
 
+var dayMonthPhrases = [];
 
 
 
@@ -63,13 +64,15 @@ function displayPoem() {
     
  background(230);
     fill(0);
-   text(dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[ parseInt(dropdownMonth.value()) - 1], 100, 100);
+   text(dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[ parseInt(dropdownMonth.value()) - 1], 75, 100);
     
-    text(yearWordsNoun[ parseInt(dropdownYear.value()) - 1950], 100, 120);
+    text(yearWordsNoun[ parseInt(dropdownYear.value()) - 1950], 75, 120);
     
-    text(dayPhrases[parseInt(dropdownDay.value()) - 1], 100, 140);
+    text(dayPhrases[parseInt(dropdownDay.value()) - 1], 75, 140);
     
-    text(yearWordsNoun[parseInt(dropdownDay.value()) * 2], 100, 160);
+   
+    text(dayWordsTime[floor((parseInt(dropdownDay.value()) / 3) * (parseInt(dropdownMonth.value()) / 2))], 75, 180);
+     text(yearWordsNoun[parseInt(dropdownDay.value()) * 2], 75, 200);
     
     
      
