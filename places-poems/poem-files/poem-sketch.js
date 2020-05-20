@@ -13,7 +13,7 @@ var dayPhrases = ["how can time be so liquid?", "it passed like a train going on
 let img;
 function preload() {
     
-    img = loadImage('forest.jpg');
+    img = loadImage('jelly.jpg');
     
 }
 
