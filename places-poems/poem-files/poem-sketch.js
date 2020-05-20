@@ -59,7 +59,7 @@ function setup() {
      dropdownYear.style('font-family:monospace');
     dropdownYear.style('background-color:pink');
 
-    background(100,50);  
+     background(100,50); 
     
     
 } 
@@ -71,16 +71,97 @@ function displayPoem() {
    fill(0);
    textFont('monospace');
     
-   text(dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[parseInt(dropdownMonth.value()) - 1], 75, 100);
+// FIRST LINE    
+    let firstLine = dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[parseInt(dropdownMonth.value()) - 1];
+
+    let firstLineW = textWidth(firstLine);
     
-    text(yearWordsNoun[parseInt(dropdownYear.value()) - 1950], 75, 120);
+    fill(255);
+    noStroke();
+    beginShape();
+    vertex(70, 85);
+    vertex(90 + firstLineW, 85);
+    vertex(91 + firstLineW, 102);
+    vertex(69, 101);
     
-    text(dayPhrases[parseInt(dropdownDay.value()) - 1], 75, 140);
+    endShape();
     
-   
-    text(dayWordsTime[floor((parseInt(dropdownDay.value()) / 3) * (parseInt(dropdownMonth.value()) / 2))], 75, 180);
     
-    text(yearWordsNoun[parseInt(dropdownDay.value()) * 2], 75, 200);
+    fill(0);
+    text(firstLine, 75, 98);
+    
+// SECOND LINE
+    
+    let secondLine = yearWordsNoun[parseInt(dropdownYear.value()) - 1950];
+    
+    let secondLineW = textWidth(secondLine);
+    
+    fill(255);
+    noStroke();
+    beginShape();
+    vertex(70, 105);
+    vertex(90 + secondLineW, 105);
+    vertex(91 + secondLineW, 122);
+    vertex(69, 121);
+    endShape();
+    
+    fill(0);
+    text(secondLine, 75, 118);
+    
+    // THIRD LINE
+    
+    let thirdLine = dayPhrases[parseInt(dropdownDay.value()) - 1];
+    
+    let thirdLineW = textWidth(thirdLine);
+    
+    fill(255);
+    noStroke();
+    beginShape();
+    vertex(70, 125);
+    vertex(90 + thirdLineW, 125);
+    vertex(91 + thirdLineW, 142);
+    vertex(69, 141);
+    endShape();
+    
+    fill(0);
+    text(thirdLine, 75, 138);
+
+    
+   // FOURTH LINE
+    let fourthLine = dayWordsTime[floor((parseInt(dropdownDay.value()) / 3) * (parseInt(dropdownMonth.value()) / 2))];
+    
+    let fourthLineW = textWidth(fourthLine);
+    
+    fill(255);
+    noStroke();
+    beginShape();
+    vertex(70, 165);
+    vertex(90 + fourthLineW, 165);
+    vertex(91 + fourthLineW, 182);
+    vertex(69, 181);
+    endShape();
+    
+    fill(0);
+    text(fourthLine, 75, 178);
+  
+    
+    
+    // FIFTH LINE
+    let fifthLine = yearWordsNoun[parseInt(dropdownDay.value()) * 2];
+    
+    let fifthLineW = textWidth(fifthLine);
+    
+    fill(255);
+    noStroke();
+    beginShape();
+    vertex(70, 185);
+    vertex(90 + fifthLineW, 185);
+    vertex(91 + fifthLineW, 202);
+    vertex(69, 201);
+    endShape();
+    
+    fill(0);
+    text(fifthLine, 75, 198);
     
     
      
