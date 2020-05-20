@@ -73,7 +73,8 @@ function setup() {
 
 
 function displayPoem() {
-  image(image[parseInt(dropdownMonth.value()], 0, 0);
+    
+  image(images[parseInt(dropdownMonth.value())], 0, 0);
               
    fill(0);
    textFont('monospace');
