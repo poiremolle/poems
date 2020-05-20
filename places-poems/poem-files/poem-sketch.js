@@ -59,24 +59,28 @@ function setup() {
      dropdownYear.style('font-family:monospace');
     dropdownYear.style('background-color:pink');
 
-    image(img, 0, 0);
+    background(100,50);  
+    
     
 } 
 
 
 
 function displayPoem() {
-       fill(0);
-    textFont('monospace');
-   text(dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[ parseInt(dropdownMonth.value()) - 1], 75, 100);
+  image(img, 0, 0);
+   fill(0);
+   textFont('monospace');
     
-    text(yearWordsNoun[ parseInt(dropdownYear.value()) - 1950], 75, 120);
+   text(dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[parseInt(dropdownMonth.value()) - 1], 75, 100);
+    
+    text(yearWordsNoun[parseInt(dropdownYear.value()) - 1950], 75, 120);
     
     text(dayPhrases[parseInt(dropdownDay.value()) - 1], 75, 140);
     
    
     text(dayWordsTime[floor((parseInt(dropdownDay.value()) / 3) * (parseInt(dropdownMonth.value()) / 2))], 75, 180);
-     text(yearWordsNoun[parseInt(dropdownDay.value()) * 2], 75, 200);
+    
+    text(yearWordsNoun[parseInt(dropdownDay.value()) * 2], 75, 200);
     
     
      
