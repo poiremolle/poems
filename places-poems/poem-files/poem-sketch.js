@@ -10,7 +10,8 @@ var yearWordsNoun = ["a thunderous desire.", "a drop of water falling from a bra
 
 var dayPhrases = ["how can time be so liquid?", "it passed like a train going on to other places", "count to ten if you're feeling lonely", "I read the same book twice", "we saw movies, we ate breakfast", "it's the sound of the highway, not the atmosphere", "who's to say that we are not in love?", "your skin is soft and it holds no temples", "there was no way we'd make it, i walked you home", "it was ok in the end", "where have all the fire escapes been moved to?", "i didn't know about the trends", "your arm across my waist, a frame in my mind", "you unwrap my heart, slowly we tumble", "however you felt back then, however you feel now", "not long enough for it to break me", "on every road side, a lonely song", "somewhere for belonging", "i wish i knew", "reading books at ungodly hours", "lemon tea and cute porcelain", "nothing to write home about", "but it was enough", "i move along with the crowd", "but sometimes i look back and I see you, staring at the sun", "it was all over the newspapers", "it's sad but it also makes sense", "somehow there was a plan, i saw it on the map", "mischief and a jars of butter biscuits", "how many ways can a leaf fall to the ground", "behind the television set, obviously"];
 
-// create a function to load 12 images
+// create a function to load 12 images, thank you PoYo on SO for asking your question 3 yrs ago, it helped me figure this out!
+
 var images = [];
 
 function preload() {
@@ -112,7 +113,7 @@ function displayPoem() {
     
     let secondLineW = textWidth(secondLine);
     
-    fill(255);
+    fill(255, 200);
     noStroke();
     beginShape();
     vertex(70, 105);
@@ -130,7 +131,7 @@ function displayPoem() {
     
     let thirdLineW = textWidth(thirdLine);
     
-    fill(255);
+    fill(255,200);
     noStroke();
     beginShape();
     vertex(70, 125);
@@ -148,7 +149,7 @@ function displayPoem() {
     
     let fourthLineW = textWidth(fourthLine);
     
-    fill(255);
+    fill(255, 200);
     noStroke();
     beginShape();
     vertex(70, 165);
@@ -167,7 +168,7 @@ function displayPoem() {
     
     let fifthLineW = textWidth(fifthLine);
     
-    fill(255);
+    fill(255, 200);
     noStroke();
     beginShape();
     vertex(70, 185);
