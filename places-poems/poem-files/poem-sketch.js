@@ -33,6 +33,11 @@ function setup() {
     // create a line of text with instructions
     p = createP('enter a date to view corresponding poem');
     
+    pLove = createP('if you like your poem, pls share! and do tag me! @poire_molle on instagram and poire-molle on tumblr, or just link back to this site :) join me on <a href="https://patreon.com/poire_molle">patreon </a> for advance access to all my generators, programs and zines')
+    
+    pLove.position(600, 400);
+    pLove.style('font-family: monospace');
+    
     // Create dropdown menu objects  
     dropdownDay = createSelect(); 
     
