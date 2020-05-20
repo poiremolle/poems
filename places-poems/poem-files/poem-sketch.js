@@ -66,9 +66,7 @@ function setup() {
 
 
 function displayPoem() {
-    
-    background(230);
-    fill(0);
+       fill(0);
     textFont('monospace');
    text(dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[ parseInt(dropdownMonth.value()) - 1], 75, 100);
     
