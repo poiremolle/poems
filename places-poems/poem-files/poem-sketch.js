@@ -15,7 +15,7 @@ var dayPhrases = ["how can time be so liquid?", "it passed like a train going on
 var images = [];
 
 function preload() {
-    for (var i = 0; i < 12; i++) {
+    for (var i = 0; i < 13; i++) {
         
     images[i] = loadImage("back" + i + ".jpg");
     
