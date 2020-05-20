@@ -17,7 +17,7 @@ var dayMonthPhrases = [];
     
 function setup() { 
     // Create a canvas 
-    createCanvas(450,300); 
+    createCanvas(500, 350); 
     createP('');
     // Create a dropdown menu object  
     dropdownDay = createSelect(); 
@@ -62,8 +62,9 @@ function setup() {
 
 function displayPoem() {
     
- background(230);
+    background(230);
     fill(0);
+    textFont('monospace');
    text(dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[ parseInt(dropdownMonth.value()) - 1], 75, 100);
     
     text(yearWordsNoun[ parseInt(dropdownYear.value()) - 1950], 75, 120);
