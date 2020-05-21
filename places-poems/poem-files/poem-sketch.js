@@ -15,7 +15,7 @@ var dayPhrases = ["how can time be so liquid?", "it passed like a train going on
 var images = [];
 
 function preload() {
-    for (var i = 0; i < 13; i++) {
+    for (var i = 0; i < 12; i++) {
         
     images[i] = loadImage("back" + i + ".jpg");
     
@@ -33,9 +33,9 @@ function setup() {
     // create a line of text with instructions
     p = createP('enter a date to view corresponding poem');
     
-    pLove = createP('if you like your poem, pls share! and do tag me! @poire_molle on instagram and poire-molle on tumblr, or just link back to this site :) join me on <a href="https://patreon.com/poire_molle">patreon </a> for advance access to all my generators, programs and zines')
+    pLove = createP('if you like your poem, pls share! and do tag me! @poire_molle on instagram and poire-molle on tumblr, or just link back to this site :) join me on patreon for advance access to all my generators, programs and zines')
     
-    pLove.position(600, 400);
+    pLove.position(700, 400);
     pLove.style('font-family: monospace');
     
     // Create dropdown menu objects  
@@ -87,7 +87,7 @@ function setup() {
 function displayPoem() {
   
 // set background image according to month value
-  image(images[parseInt(dropdownMonth.value())], 0, 0);
+  image(images[parseInt(dropdownMonth.value()) - 1], 0, 0);
       
 // start of poem setup
    fill(0);
