@@ -33,14 +33,18 @@ function setup() {
     
     // create a line of text with instructions
     p = createP('enter a date to view corresponding poem');
+        p.parent('instructions');
     
     
     // Create dropdown menu objects  
-    dropdownDay = createSelect(); 
+    dropdownDay = createSelect();
+        dropdownDay.parent('dropdownday');
     
     dropdownMonth = createSelect(); 
+        dropdownMonth.parent('dropdownmonth');
     
     dropdownYear = createSelect(); 
+        dropdownYear.parent('dropdownyear');
     
     button = createButton('submit');
         button.mousePressed(displayPoem);
@@ -61,16 +65,16 @@ function setup() {
     }
     
     // style DOM objects
-   // p.style('font-family:monospace');
+    p.style('font-family:monospace');
     
-   // button.style('font-family:monospace');
+    button.style('font-family:monospace');
   
 
-   // dropdownDay.style('font-family:monospace');
+    dropdownDay.style('font-family:monospace');
     dropdownDay.style('background-color:pink');
-   // dropdownMonth.style('font-family:monospace');
+    dropdownMonth.style('font-family:monospace');
     dropdownMonth.style('background-color:pink');
-   // dropdownYear.style('font-family:monospace');
+    dropdownYear.style('font-family:monospace');
     dropdownYear.style('background-color:pink');
 
     background(100, 50); 
@@ -88,7 +92,6 @@ function displayPoem() {
       
 // start of poem setup
    fill(0);
-  // textFont('monospace');
     
 // FIRST LINE    
     let firstLine = dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[parseInt(dropdownMonth.value()) - 1];
