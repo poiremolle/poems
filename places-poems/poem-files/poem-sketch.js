@@ -28,15 +28,12 @@ function preload() {
 function setup() { 
     
     // Create a canvas 
-    createCanvas(500, 350); 
+    var canvas = createCanvas(500, 350); 
+        canvas.parent('canvasp');
     
     // create a line of text with instructions
     p = createP('enter a date to view corresponding poem');
     
-    pLove = createP('if you like your poem, pls share! and do tag me! @poire_molle on instagram and poire-molle on tumblr, or just link back to this site :) join me on patreon for advance access to all my generators, programs and zines')
-    
-    pLove.position(700, 400);
-    pLove.style('font-family: monospace');
     
     // Create dropdown menu objects  
     dropdownDay = createSelect(); 
@@ -64,16 +61,16 @@ function setup() {
     }
     
     // style DOM objects
-    p.style('font-family:monospace');
+   // p.style('font-family:monospace');
     
-    button.style('font-family:monospace');
+   // button.style('font-family:monospace');
   
 
-    dropdownDay.style('font-family:monospace');
+   // dropdownDay.style('font-family:monospace');
     dropdownDay.style('background-color:pink');
-    dropdownMonth.style('font-family:monospace');
+   // dropdownMonth.style('font-family:monospace');
     dropdownMonth.style('background-color:pink');
-    dropdownYear.style('font-family:monospace');
+   // dropdownYear.style('font-family:monospace');
     dropdownYear.style('background-color:pink');
 
     background(100, 50); 
@@ -91,7 +88,7 @@ function displayPoem() {
       
 // start of poem setup
    fill(0);
-   textFont('monospace');
+  // textFont('monospace');
     
 // FIRST LINE    
     let firstLine = dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[parseInt(dropdownMonth.value()) - 1];
