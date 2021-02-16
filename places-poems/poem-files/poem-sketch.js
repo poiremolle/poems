@@ -15,7 +15,7 @@ var dayPhrases = ["how can time be so liquid?", "it passed like a train going on
 var images = [];
 
 function preload() {
-    for (var i = 0; i < 12; i++) {
+    for (var i = 0; i < 14; i++) {
         
     images[i] = loadImage("back" + i + ".jpg");
     
@@ -85,8 +85,71 @@ function setup() {
 } 
 
 
+function displayPoem() {
+    let textHeight = 45;  
+    let textX = width / 7;
+   
+// VERSE ARRAY
+    textSize(textHeight);   
+    let verses = [dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[parseInt(dropdownMonth.value()) - 1], 
+                  
+                  yearWordsNoun[parseInt(dropdownYear.value()) - 1950 + parseInt(dropdownDay.value())], 
+                  
+                  dayPhrases[parseInt(dropdownDay.value()) - 1], 
+                  
+                  dayWordsTime[floor((parseInt(dropdownDay.value()) / 3) * (parseInt(dropdownMonth.value()) / 2))], 
+                  
+                  yearWordsNoun[parseInt(dropdownDay.value()) * 2], 
+                  
+                  "6 lsznejifrerja", 
+                  
+                  "7 nghlwehiornlkw3"];
+
+// RANDOMIZE HEIGHT OF COUPLET
+    let randY = random(0,height - verses.length * (verses.length/1.7) * textHeight);
+    
+// INITIALIZE VERSE WIDTH ARRAY 
+    let versesW = [];
+
+// LOOP TO CREATE A WHITE BACKGROUND AND TEXT FOR EACH VERSE IN THE VERSES ARRAY   
+for(let i = 0; i < verses.length; i++){
+    
+     let handcut = random(-textHeight / 4.5, textHeight / 4.5);
+
+    //LOOP THROUGH EACH VERSE TO ASSIGN IT A WIDTH VALUE 
+        versesW[i] = textWidth(verses[i]);
+    
+    let textY = (height / random(5,6)) + (i * 3 * textHeight) + randY;
+    
+    //BACKGROUND SHAPE FOR TEXT
+    fill(255, 200);
+    noStroke();
+    
+    beginShape();
+        vertex(textX * 0.92 + handcut, textY - textHeight * 0.5  + handcut);
+
+        vertex(textX + versesW[i] * 1.08 + handcut, textY - textHeight * 0.5 + random(-10, 10));
+
+        vertex(textX + versesW[i] * 1.06 + handcut, textY + textHeight * 1.05);
+
+        vertex(textX * 0.95 + handcut, textY + textHeight * 1.05);
+    endShape();
+
+    //VERSE
+    textAlign(LEFT, TOP);
+    textSize(textHeight);
+    fill(0);
+    text(verses[i], textX, textY);
+
+} //END VERSE LOOP
+
+} //END DISPLAYPOEM FUNC
+
 
 function displayPoem() {
+let textHeight = 20;  
+let textX = width / 7;
+let textY = height / 6;
     
 // set background image according to month value
   image(images[parseInt(dropdownMonth.value()) - 1], 0, 0);
@@ -99,19 +162,33 @@ function displayPoem() {
 
     let firstLineW = textWidth(firstLine);
     
-    fill(255);
+ fill(255);
     noStroke();
     beginShape();
-    vertex(70, 85);
-    vertex(90 + firstLineW, 85);
-    vertex(91 + firstLineW, 102);
-    vertex(69, 101);
+    vertex(textX * 0.92, textY * 0.92);
+    vertex(textX * 1.01 + firstLineW, textY);
+    vertex(textX + firstLineW, textY + textHeight * 1.01);
+    vertex(textX * 0.95, textY + textHeight * 1.05);
     
     endShape();
     
-    textSize(12);
+    textSize(textHeight);
     fill(0);
-    text(firstLine, 75, 98);
+    text(firstLine, textX, textY);
+    
+//    fill(255);
+//    noStroke();
+//    beginShape();
+//    vertex(70, 85);
+//    vertex(90 + firstLineW, 85);
+//    vertex(91 + firstLineW, 102);
+//    vertex(69, 101);
+//    
+//    endShape();
+//    
+//    textSize(20);
+//    fill(0);
+//    text(firstLine, 75, 98);
     
 // SECOND LINE
    
@@ -128,7 +205,7 @@ function displayPoem() {
     vertex(69, 121);
     endShape();
     
-    textSize(12);
+    textSize(20);
     fill(0);
     text(secondLine, 75, 118);
     
@@ -147,7 +224,7 @@ function displayPoem() {
     vertex(69, 141);
     endShape();
     
-    textSize(12);
+    textSize(20);
     fill(0);
     text(thirdLine, 75, 138);
 
@@ -166,7 +243,7 @@ function displayPoem() {
     vertex(69, 181);
     endShape();
     
-    textSize(12);
+    textSize(20);
     fill(0);
     text(fourthLine, 75, 178);
   
@@ -186,7 +263,7 @@ function displayPoem() {
     vertex(69, 201);
     endShape();
     
-    textSize(12);
+    textSize(20);
     fill(0);
     text(fifthLine, 75, 198);
     
