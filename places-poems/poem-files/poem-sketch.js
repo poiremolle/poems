@@ -15,7 +15,7 @@ var dayPhrases = ["how can time be so liquid?", "it passed like a train going on
 var images = [];
 
 function preload() {
-    for (var i = 0; i < 14; i++) {
+    for (var i = 0; i < 12; i++) {
         
     images[i] = loadImage("back" + i + ".jpg");
     
@@ -86,8 +86,11 @@ function setup() {
 
 
 function displayPoem() {
-    let textHeight = 45;  
+    let textHeight = width / 39;  
     let textX = width / 7;
+    
+// SET BACKGROUND IMG ACCORDING TO MONTH
+  image(images[parseInt(dropdownMonth.value()) - 1], 0, 0);
    
 // VERSE ARRAY
     textSize(textHeight);   
@@ -146,125 +149,3 @@ for(let i = 0; i < verses.length; i++){
 } //END DISPLAYPOEM FUNC
 
 
-function displayPoem() {
-let textHeight = 20;  
-let textX = width / 7;
-let textY = height / 6;
-    
-// set background image according to month value
-  image(images[parseInt(dropdownMonth.value()) - 1], 0, 0);
-      
-// start of poem setup
-   fill(0);
-    
-// FIRST LINE    
-    let firstLine = dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[parseInt(dropdownMonth.value()) - 1];
-
-    let firstLineW = textWidth(firstLine);
-    
- fill(255);
-    noStroke();
-    beginShape();
-    vertex(textX * 0.92, textY * 0.92);
-    vertex(textX * 1.01 + firstLineW, textY);
-    vertex(textX + firstLineW, textY + textHeight * 1.01);
-    vertex(textX * 0.95, textY + textHeight * 1.05);
-    
-    endShape();
-    
-    textSize(textHeight);
-    fill(0);
-    text(firstLine, textX, textY);
-    
-//    fill(255);
-//    noStroke();
-//    beginShape();
-//    vertex(70, 85);
-//    vertex(90 + firstLineW, 85);
-//    vertex(91 + firstLineW, 102);
-//    vertex(69, 101);
-//    
-//    endShape();
-//    
-//    textSize(20);
-//    fill(0);
-//    text(firstLine, 75, 98);
-    
-// SECOND LINE
-   
-    let secondLine = yearWordsNoun[parseInt(dropdownYear.value()) - 1950 + parseInt(dropdownDay.value())];
-    
-    let secondLineW = textWidth(secondLine);
-    
-    fill(255, 200);
-    noStroke();
-    beginShape();
-    vertex(70, 105);
-    vertex(90 + secondLineW, 105);
-    vertex(91 + secondLineW, 122);
-    vertex(69, 121);
-    endShape();
-    
-    textSize(20);
-    fill(0);
-    text(secondLine, 75, 118);
-    
-// THIRD LINE
-    
-    let thirdLine = dayPhrases[parseInt(dropdownDay.value()) - 1];
-    
-    let thirdLineW = textWidth(thirdLine);
-    
-    fill(255,200);
-    noStroke();
-    beginShape();
-    vertex(70, 125);
-    vertex(90 + thirdLineW, 125);
-    vertex(91 + thirdLineW, 142);
-    vertex(69, 141);
-    endShape();
-    
-    textSize(20);
-    fill(0);
-    text(thirdLine, 75, 138);
-
-    
-// FOURTH LINE
-    let fourthLine = dayWordsTime[floor((parseInt(dropdownDay.value()) / 3) * (parseInt(dropdownMonth.value()) / 2))];
-    
-    let fourthLineW = textWidth(fourthLine);
-    
-    fill(255, 200);
-    noStroke();
-    beginShape();
-    vertex(70, 165);
-    vertex(90 + fourthLineW, 165);
-    vertex(91 + fourthLineW, 182);
-    vertex(69, 181);
-    endShape();
-    
-    textSize(20);
-    fill(0);
-    text(fourthLine, 75, 178);
-  
-    
-    
-// FIFTH LINE
-    let fifthLine = yearWordsNoun[parseInt(dropdownDay.value()) * 2];
-    
-    let fifthLineW = textWidth(fifthLine);
-    
-    fill(255, 200);
-    noStroke();
-    beginShape();
-    vertex(70, 185);
-    vertex(90 + fifthLineW, 185);
-    vertex(91 + fifthLineW, 202);
-    vertex(69, 201);
-    endShape();
-    
-    textSize(20);
-    fill(0);
-    text(fifthLine, 75, 198);
-    
-}
