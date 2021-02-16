@@ -28,7 +28,7 @@ function preload() {
 function setup() { 
     
     // Create a canvas 
-    var canvas = createCanvas(500, 350); 
+    var canvas = createCanvas(1748, 2480); 
         canvas.parent('canvasp');
     
     // create a line of text with instructions
@@ -109,7 +109,7 @@ function displayPoem() {
     
     endShape();
     
-    
+    textSize(12);
     fill(0);
     text(firstLine, 75, 98);
     
@@ -128,6 +128,7 @@ function displayPoem() {
     vertex(69, 121);
     endShape();
     
+    textSize(12);
     fill(0);
     text(secondLine, 75, 118);
     
@@ -146,6 +147,7 @@ function displayPoem() {
     vertex(69, 141);
     endShape();
     
+    textSize(12);
     fill(0);
     text(thirdLine, 75, 138);
 
@@ -164,6 +166,7 @@ function displayPoem() {
     vertex(69, 181);
     endShape();
     
+    textSize(12);
     fill(0);
     text(fourthLine, 75, 178);
   
@@ -183,6 +186,7 @@ function displayPoem() {
     vertex(69, 201);
     endShape();
     
+    textSize(12);
     fill(0);
     text(fifthLine, 75, 198);
     
