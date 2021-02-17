@@ -106,13 +106,15 @@ function displayPoem() {
                   
                   dayPhrases[parseInt(dropdownDay.value()) - 1], 
                   
+                  randAction[parseInt(random(randAction.length))], 
+                  
+                  randNoun[parseInt(random(randNoun.length))],
+                 
                   dayWordsTime[floor((parseInt(dropdownDay.value()) / 3) * (parseInt(dropdownMonth.value()) / 2))], 
                   
                   yearWordsNoun[parseInt(dropdownDay.value()) * 2], 
-                  
-                  randAction[random(randAction.length)], 
-                  
-                  randNoun[random(randNoun.length)] ];
+                 ];
+    
 
 // RANDOMIZE HEIGHT OF COUPLET
     let randY = random(0,height - verses.length * (verses.length/1.7) * textHeight);
