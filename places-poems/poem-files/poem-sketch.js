@@ -17,7 +17,7 @@ var randAction = ["i thought about", "it revealed", "it rained that day, when yo
 var randNoun = ["your skin, deep like the earth.", "the space in between two books.", "the space that defines what's in the past.","your hands, gently batting away the clouds.","a single wave, crashing into nothing.","your eyes, closing as the rain fell.","a long time without worrying.","summer in the city.","a single light on, floating in the distance.","a faint memory, unknown yet unfading.","a memory of a place in my mind.","the equinox of our relationship.","a sunset in reversed form.","a single cloud, hesitating to rain.", "a book, waiting for the dust to fall.","a singular tear.", "our lunches by the lake.","your hair, long and unwavering.","a strange feeling."];
 
 // create a function to load 12 images, thank you PoYo on SO for asking your question 3 yrs ago, it helped me figure this out!
-g
+
 var images = [];
 
 function preload() {
