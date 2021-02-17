@@ -12,9 +12,9 @@ var yearWordsNoun = ["a thunderous desire.", "a drop of water falling from a bra
 
 var dayPhrases = ["how can time be so liquid?", "it passed like a train going on to other places.", "count to ten if you're feeling lonely.", "I read the same book twice.", "we saw movies, we ate breakfast.", "it's the sound of the highway, not the atmosphere.", "who's to say that we are not in love?", "your skin is soft and it holds no temples.", "there was no way we'd make it, i walked you home.", "it was ok in the end.", "where have all the fire escapes been moved to?", "the relentless desire for change.", "your arm across my waist, a frame in my mind.", "you unwrap my heart, slowly we tumble.", "however you felt back then, however you feel now.", "not long enough for it to break me.", "on every road side, a lonely song.", "somewhere for belonging.", "i wish i'd known to take it.", "reading books at ungodly hours", "lemon tea and cute porcelain.", "nothing to write home about.", "it was enough.", "i move along with the crowd", "but sometimes i look back and I see you, staring at the sun.", "a juicy peach rolls down my spine.", "it's sad but it also makes sense.", "somehow there was a plan, i saw it on the map.", "mischief and a jar of butter biscuits.", "how many ways can a leaf fall to the ground?", "the wind picks up, but it soon dies down again."];
 
-var randAction = ["i conjured", "they all talked about", "it rained that day, when you gave me", "i sipped on the moment,"];
+var randAction = ["i thought about", "it revealed", "it rained that day, when you gave me", "i sipped on the moment,", "I hesitated,","like a dream fading in the deep lake,", "soft hands and sleepy eyes,","i wondered what you'd say, so i told you about","i wish i understood you, but instead you give me","you thought about romance, i thought about","the waves are nothing but","maybe it was a coincidence, maybe it was","i'll always remember","we walked side by side, i remembered","coincidences are nothing but","a plant, crawling up"];
 
-var randNoun = ["your skin, deep like the earth.", "a tin box."];
+var randNoun = ["your skin, deep like the earth.", "something i'll never know about", "the space that defines what's in the past.","your hands, gently batting away the clouds.","a single wave, crashing into nothing.","your eyes, closing as the rain fell.","a long time without worrying.","summer in the city.","a single light on, floating in the distance.","a faint memory, unknown yet unfading."."a memory of a place in my mind.","the equinox of our relationship.","a sunset in reversed form.","a single cloud, raining."];
 
 // create a function to load 12 images, thank you PoYo on SO for asking your question 3 yrs ago, it helped me figure this out!
 
@@ -100,7 +100,7 @@ function displayPoem() {
    
 // VERSE ARRAY
     textSize(textHeight);   
-    let verses = [dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[parseInt(dropdownMonth.value()) - 1], 
+    let verses = [ dayWordsTime[parseInt(dropdownDay.value()) - 1] + monthWordsVerb[parseInt(dropdownMonth.value()) - 1], 
                   
                   yearWordsNoun[parseInt(dropdownYear.value()) - 1950 + parseInt(dropdownDay.value())], 
                   
@@ -112,7 +112,7 @@ function displayPoem() {
                   
                   randAction[random(randAction.length)], 
                   
-                  randNoun[random(randNoun.length)];
+                  randNoun[random(randNoun.length)] ];
 
 // RANDOMIZE HEIGHT OF COUPLET
     let randY = random(0,height - verses.length * (verses.length/1.7) * textHeight);
