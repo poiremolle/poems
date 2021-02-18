@@ -114,7 +114,7 @@ function displayPoem() {
                  
                   dayWordsTime[floor((parseInt(dropdownDay.value()) / 3) * (parseInt(dropdownMonth.value()) / 2))], 
                   
-                  yearWordsNoun[parseInt(dropdownDay.value()) * 2], 
+                  yearWordsNoun[parseInt(dropdownDay.value()) + 4], 
                  ];
     
 
