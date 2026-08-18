@@ -23,7 +23,7 @@ var images = [];
 function preload() {
     for (var i = 0; i < 12; i++) {
         
-    images[i] = loadImage("back" + i + ".jpg");
+    images[i] = loadImage("places-poems/poem-files/back" + i + ".jpg");
     
 } // end for loop
     
